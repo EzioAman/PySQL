@@ -1,32 +1,33 @@
-# 🗄️ MySQL Database Viewer (Python GUI)
+# PySQL — MySQL Database Viewer (Python GUI)
 
-A Python desktop application that connects to a **MySQL database** and allows users to **fetch, view, and execute SQL queries through a graphical interface**.
+PySQL is a **Python-based graphical interface for interacting with a MySQL database**.
+It allows users to fetch and display data from database tables and execute custom SQL queries through an easy-to-use GUI.
 
-The application provides a simple interface to interact with database tables such as **Students, Staff, and Salary**, and supports executing **custom SQL queries dynamically**.
+The project demonstrates integration between **Python, MySQL, and a desktop GUI using Tkinter**.
 
 ---
 
 # 📌 Project Overview
 
-This project demonstrates how to connect a **Python application to a MySQL database** and interact with database tables using a **graphical user interface built with Tkinter**.
+This project connects a Python application to a MySQL database and displays query results in a **dynamic table interface**.
 
-The tool enables users to:
+Users can:
 
-* Retrieve records from specific tables
+* Retrieve records from predefined tables
 * Execute custom SQL queries
-* Display results dynamically in a table format
-* Manage database data through a GUI instead of a terminal
+* View results in a structured table format
+* Interact with a database without using the command line
 
 ---
 
 # ✨ Features
 
-✔ Connect to a **MySQL database**
-✔ Fetch records from multiple tables
+✔ Connects to a **MySQL database**
+✔ Fetch data from multiple tables
 ✔ Execute **custom SQL queries**
-✔ Display results dynamically in a **table view**
-✔ Scrollable and adjustable data table
-✔ User-friendly **GUI interface**
+✔ Display results in a **dynamic table view**
+✔ Scrollable results table
+✔ Simple GUI built with Tkinter
 
 ---
 
@@ -42,7 +43,7 @@ The tool enables users to:
 # 📂 Project Structure
 
 ```
-MySQL-Database-Viewer
+PySQL
 │
 ├── DBMS.py
 └── README.md
@@ -50,31 +51,27 @@ MySQL-Database-Viewer
 
 ---
 
-# ⚙️ How It Works
+# ⚙️ How the Application Works
 
-The application connects to a MySQL database using:
+The program connects to a MySQL database using:
 
+```python
+mysql.connector.connect()
 ```
-mysql.connector
-```
 
-Users can:
+The GUI provides buttons to fetch data from tables such as:
 
-1. Fetch data from predefined tables such as:
+* Students
+* Staff
+* Salary
 
-   * Students
-   * Staff
-   * Salary
-
-2. Enter and execute **custom SQL queries**.
-
-3. View results displayed in a **dynamic table interface** built with Tkinter.
+Users can also write and execute **custom SQL queries** directly from the interface.
 
 ---
 
-# 🚀 How to Run
+# 🚀 Running the Project
 
-### 1️⃣ Install required library
+### 1️⃣ Install dependency
 
 ```
 pip install mysql-connector-python
@@ -82,7 +79,9 @@ pip install mysql-connector-python
 
 ### 2️⃣ Configure database connection
 
-Edit the database connection section inside `DBMS.py`:
+Update the connection credentials inside `DBMS.py`.
+
+Example:
 
 ```
 host="localhost"
@@ -97,15 +96,15 @@ database="your_database"
 python DBMS.py
 ```
 
-The GUI will launch and allow interaction with the database.
+The GUI will open and allow interaction with the database.
 
 ---
 
 # 📊 Example Use Cases
 
 * Viewing student records
-* Checking staff details
-* Monitoring salary data
+* Checking staff information
+* Managing salary data
 * Running custom SQL queries for analysis
 
 ---
@@ -113,7 +112,7 @@ The GUI will launch and allow interaction with the database.
 # ⚠️ Security Note
 
 Avoid committing real database credentials to public repositories.
-Use **environment variables or configuration files** for sensitive information.
+Use environment variables or configuration files for sensitive information.
 
 ---
 
