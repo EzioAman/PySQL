@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 import mysql.connector
+import os
 
 def fetch_students_info(table):
     query = "SELECT * FROM Students"
@@ -28,10 +29,9 @@ def fetch_data_info(query, table):
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Arkoarceus@99",
-            database="aman"
+            password=os.getenv("MYSQL_PASSWORD"),
+            database="YOUR_DATABASE"
         )
-
         # Create a cursor object to execute SQL queries
         cur = conn.cursor()
 
